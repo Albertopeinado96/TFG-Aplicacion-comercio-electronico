@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".OrderActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_nombre"
+        android:theme="@style/EditTextTheme"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edit_text_border_grey"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/nombre"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editText_apellidos"
+        android:layout_width="0dp"
+        android:theme="@style/EditTextTheme"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/edit_text_border_grey"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/apellidos"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/editText_nombre"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editText_direccion"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:theme="@style/EditTextTheme"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/edit_text_border_grey"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/direcci_n_calle_y_n_mero"
+        android:inputType="text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_nombre"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editText_direccion2"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:theme="@style/EditTextTheme"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/edit_text_border_grey"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/l_nea_de_direcci_n_adicional_opcional"
+        android:inputType="text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_direccion"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/planta_bloque_escalera_puerta_etc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_direccion2" />
+
+    <EditText
+        android:id="@+id/editText_cp"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:theme="@style/EditTextTheme"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edit_text_border_grey"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/cp"
+        android:inputType="number"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editText_ciudad"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/edit_text_border_grey"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/ciudad"
+        android:inputType="text"
+        android:theme="@style/EditTextTheme"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editText_cp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editText_phone"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:theme="@style/EditTextTheme"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/edit_text_border_grey"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/n_mero_de_tel_fono"
+        android:inputType="phone"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_cp"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editText_country"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:theme="@style/EditTextTheme"
+        android:background="@drawable/edit_text_border_grey"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/pa_s"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_phone" />
+
+    <Button
+        android:id="@+id/button_envio_done"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/button_shape_black"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="@font/roboto"
+        android:text="@string/hecho"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_country" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

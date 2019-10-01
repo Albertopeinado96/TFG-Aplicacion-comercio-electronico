@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:background="@drawable/cardview_shape"
+            android:padding="8dp">
+
+            <Button
+                android:id="@+id/add_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginBottom="2dp"
+                android:layout_toEndOf="@+id/num_unidades"
+                android:background="@drawable/button_shape_rect_white"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/plus_sign"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:contentDescription="@string/a_adir_una_unidad"/>
+
+            <Button
+                android:id="@+id/minus_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/button_shape_rect_white"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/minus_sign"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:contentDescription="@string/restar_una_unidad"/>
+
+            <Button
+                android:id="@+id/delete_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/button_shape_rect_white"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/x"
+                android:textSize="18sp"
+                android:contentDescription="@string/eliminar_producto_de_la_cesta"/>
+
+            <ImageView
+                android:id="@+id/productImageView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/imagen_del_producto" />
+
+            <RatingBar
+                android:id="@+id/itemRatingBar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewTitle"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/productImageView"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressTint="#FFD53B" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@id/productImageView"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:text="@string/apple_macbook_air_core_i5_5th_gen_8_gb"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/num_unidades"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginBottom="2dp"
+                android:layout_toEndOf="@+id/minus_button"
+                android:gravity="center"
+                android:text="@string/Unidades_default"
+                android:background="@drawable/button_shape_rect_white"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/textViewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/itemRatingBar"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/productImageView"
+                android:fontFamily="@font/roboto"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:text="@string/precio"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="#000000"
+                android:textStyle="normal" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
